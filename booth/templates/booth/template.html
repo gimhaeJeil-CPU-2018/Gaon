@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/booth/style.css' %}">
+    <title>가온체험전</title>
+</head>
+<body>
+    <section id="top">
+        <div id="logo" onclick="location.href='/';">Ga-on</div>
+    </section>
+    <section id="contents">
+        {% block contents %}
+        {% endblock %}
+    </section>
+</body>
+</html>

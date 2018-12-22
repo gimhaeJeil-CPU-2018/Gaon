@@ -1,0 +1,14 @@
+{% extends 'booth/template.html' %}
+{% block contents %}
+
+{% for booth in list %}
+<div id="boothlist" >
+    <div id="bName" onclick="location.href='{% url 'boothinfo' pk=booth.pk %}';">
+        {{ booth.BthName }}
+    </div>
+    <div id="stxt">
+        {{ booth.stxt }}
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

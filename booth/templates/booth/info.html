@@ -1,0 +1,12 @@
+{% extends 'booth/template.html' %}
+{% block contents %}
+<div id="photolist">
+    {% for photos in info.picture.all %}
+        <img src="{{ photos.img.url }}" alt="" id="btimage">
+    {% endfor %}
+</div>
+<div id="BthInfo">
+    <div id="btname">{{ info.BthName }}</div>
+    <div id="bttext">{{ info.text|linebreaksbr }}</div>
+</div>
+{% endblock %}
