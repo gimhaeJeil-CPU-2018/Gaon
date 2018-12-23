@@ -1,6 +1,6 @@
 body
 {
-    background-color: gainsboro;
+    background-color: whitesmoke;
     font-family: sans-serif;
 }
 #top
@@ -11,8 +11,8 @@ body
     left: 0;
     width: 100%;
     height: 60px;
-    background-color: whitesmoke;
-    border-bottom: 1px solid gray;
+    background-color: white;
+    border-bottom: 1px solid gainsboro;
 }
 #logo
 {
@@ -23,11 +23,13 @@ body
 }
 #login
 {
-    padding: 10px;
-    padding-top: 15px;
+    margin: 10px;
+    margin-top: 15px;
     float: right;
     width: 50px;
     text-align: center;
+    border-left: 1px solid gainsboro;
+    color: gray;
 }
 #contents
 {   
@@ -38,17 +40,16 @@ body
 }
 #boothlist
 {
-    background-color: white;
+    background-color: whitesmoke;
     position: relative;
-    height: 60px;
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid gainsboro;
+    min-height: 60px;
     margin-bottom: 10px;
     padding: 10px;
 }
 #boothlist:hover
 {
-    box-shadow: 0px 6px gray;
+    background-color: white;
 }
 #bName
 {
@@ -60,8 +61,8 @@ body
 }
 #BthInfo
 {
-    border-top: black solid 1px;
-    border-bottom: black solid 1px;
+    border-top: gainsboro solid 1px;
+    border-bottom: gainsboro solid 1px;
     width: 100%;
     background-color: white;
 }
@@ -74,6 +75,11 @@ body
 #bttext
 {
     padding: 5px;
+}
+#loc
+{
+    padding: 5px;
+    font-weight: bold;
 }
 #photolist
 {
@@ -97,12 +103,16 @@ body
     width: 200px;
     height: 30px;
     font-size: 25px;
+    border: none;
+    border-bottom: 1px solid gainsboro;
 }
 #id_password
 {
     width: 200px;
     height: 30px;
     font-size: 25px;
+    border: none;
+    border-bottom: 1px solid gainsboro;
 }
 #id_email
 {

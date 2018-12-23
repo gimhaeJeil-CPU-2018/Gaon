@@ -8,7 +8,9 @@
 </head>
 <body>
     <section id="top">
-        <div id="logo" onclick="location.href='/';">Ga-on</div>
+        <div id="logo" onclick="location.href='/';">
+            <img src="{% static 'img/logo2.png' %}" alt="" width="50px">
+        </div>
         {% if user.is_authenticated %}
         <div id="login">{{ user.username }}</div>
         {% else %}

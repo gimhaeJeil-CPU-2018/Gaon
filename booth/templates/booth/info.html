@@ -8,5 +8,9 @@
 <div id="BthInfo">
     <div id="btname">{{ info.BthName }}</div>
     <div id="bttext">{{ info.text|linebreaksbr }}</div>
+    <div id="loc">
+        위치
+        <div id="locClass">{{ info.floor }}층 {{ info.location }}</div>
+    </div>
 </div>
 {% endblock %}
