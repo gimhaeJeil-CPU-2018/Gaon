@@ -9,6 +9,11 @@
 <body>
     <section id="top">
         <div id="logo" onclick="location.href='/';">Ga-on</div>
+        {% if user.is_authenticated %}
+        <div id="login">{{ user.username }}</div>
+        {% else %}
+        <script>location.href='/accounts/login'</script>
+        {% endif %}
     </section>
     <section id="contents">
         {% block contents %}

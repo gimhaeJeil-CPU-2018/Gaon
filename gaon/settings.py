@@ -25,7 +25,7 @@ SECRET_KEY = '=o)p)$4w7i+&l(52pn9qx+)(%q+y9%!r4hwf77rmmezh9tu7b$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','52.231.72.54','gaonexp.com']
 
 
 # Application definition

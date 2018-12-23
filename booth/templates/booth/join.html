@@ -1,0 +1,19 @@
+{% extends 'booth/template.html' %}
+{% block contents %}
+    <form action="" method="post" id='join'>{% csrf_token %}
+        <div id="idd">
+            <h2>학번, 이름</h2>
+            {{ form.username }}
+        </div>
+        <div id="idd">
+            <h2>비밀번호</h2>
+            <input class="form-control" id="{{ form.password.id_for_label }}" maxlength="120" name="{{ form.password.html_name }}" type="password" />
+        </div>
+        <div id="idd">
+            <h2>이메일</h2>
+            {{ form.email }}
+        </div>
+        <br>
+        <button id='join_B' type="submit">완료</button>
+    </form>
+{% endblock %}

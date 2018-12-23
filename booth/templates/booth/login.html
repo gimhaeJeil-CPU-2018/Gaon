@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <style>
+        body{background-color: whitesmoke; font-family: sans-serif;}
+        h2{display: inline;}
+        input{width: 160px;height: 30px; font-size: 25px;}
+        #center{position: relative; text-align: center; top: 180px;}
+        #idd{margin-bottom: 10px;}
+        #loginbut{margin-top: 20px; width: 200px; height: 40px; border-radius: 20px; font-size: 15px;}
+        #join{margin-top: 20px;}
+        #joinlnk{color:black;}
+    </style>
+</head>
+<body>
+    <section id="center">
+        <form action="" method="POST" id="login">{% csrf_token %}
+            <div id="idd">
+                <h2>학번, 이름</h2>  
+                {{ form.username }}
+            </div>
+            <div id="pw">
+                <h2>비밀번호</h2>  
+                <input class="form-control" id="{{ form.password.id_for_label }}" maxlength="120" name="{{ form.password.html_name }}" type="password" />
+            </div>
+            <button type="submit" id='loginbut'>로그인하고 부스 보러가기</button>
+        </form>
+    <div id="join">
+        또는
+        <a href="../join" id="joinlnk">가입하고 부스 보러가기</a>
+    </div>
+    </section>
+</body>
+</html>

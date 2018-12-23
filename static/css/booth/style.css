@@ -11,14 +11,20 @@ body
     left: 0;
     width: 100%;
     height: 70px;
-    background-color: white;
+    background-color: gainsboro;
     border-bottom: 1px solid gray;
 }
 #logo
 {
+    float: left;
     font-size: 50px;
     font-weight: bold;
     padding: 7px;
+}
+#login
+{
+    padding: 10px;
+    float: right;
 }
 #contents
 {   
@@ -64,4 +70,45 @@ body
 #bttext
 {
     padding: 5px;
+}
+#photolist
+{
+    overflow: scroll;
+    white-space: nowrap;
+}
+#btimage
+{
+    width: 100%;
+}
+#warea
+{
+    margin-left: 10px;
+}
+#join
+{
+    text-align: center;
+}
+#id_username
+{
+    width: 200px;
+    height: 30px;
+    font-size: 25px;
+}
+#id_password
+{
+    width: 200px;
+    height: 30px;
+    font-size: 25px;
+}
+#id_email
+{
+    width: 200px;
+    height: 30px;
+    font-size: 25px;
+}
+#join_B
+{
+    width: 60px;
+    height: 40px;
+    font-size: 15px;
 }
