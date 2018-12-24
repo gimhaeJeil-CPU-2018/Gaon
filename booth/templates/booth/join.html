@@ -1,5 +1,18 @@
-{% extends 'booth/template.html' %}
-{% block contents %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>가입하기</title>
+    <style>
+        body{background-color: white; font-family: sans-serif;}
+        h2{display: inline;}
+        input{width: 200px;height: 30px; font-size: 20px; border: none; border-bottom: 1px solid gainsboro; text-align: center;}
+        #join{position: relative; text-align: center; top: 150px;}
+        button{margin-top: 20px; width: 200px; height: 40px; border-radius: 20px; font-size: 16px; border: none; background-color: #82f; color: #FFFFFF;}
+        </style>
+</head>
+<body>
     <form action="" method="post" id='join'>{% csrf_token %}
         <div id="idd">
             <h2>학번, 이름</h2>
@@ -16,4 +29,6 @@
         <br>
         <button id='join_B' type="submit">완료</button>
     </form>
-{% endblock %}
+</body>
+</html>
+    

@@ -19,7 +19,6 @@
 <body>
     <section id="logo">
         <img src="{% static 'img/logo2.png' %}" alt="" width="200px"><br>
-        가온 부스 안내, 리뷰
     </section>
     <section id="center">
         <form action="" method="POST" id="login">{% csrf_token %}
@@ -35,7 +34,7 @@
         </form>
     <div id="join">
         또는
-        <a href="../join" id="joinlnk">가입하고 부스 보러가기</a>
+        <a href="/join" id="joinlnk">가입하고 부스 보러가기</a>
     </div>
     </section>
 </body>
