@@ -5,12 +5,12 @@ from django.contrib.auth.models import User
 class BoothForm(forms.ModelForm):
     class Meta:
         model = BoothList
-        fields = ('BthName', 'picture', 'stxt', 'text', 'floor', 'location',)
+        fields = ('stxt', 'text', 'floor', 'location',)
 
 class ImageAdd(forms.ModelForm):
     class Meta:
         model = photo
-        fields = ('name', 'img',)
+        fields = ('img',)
 
 class JoinNew(forms.ModelForm):
     class Meta:

@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import BoothList
+from .models import BoothList, photo
 from .forms import BoothForm, ImageAdd, JoinNew, LoginGo
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate
@@ -13,28 +13,34 @@ def boothinfo(request,pk):
     info = BoothList.objects.get(pk=pk)
     return render(request, 'booth/info.html', {'info':info})
 
+def bnamenew(request):
+    return render(request, 'booth/newbname.html')
+
 def boothnew(request):
     if request.method == "POST":
         form = BoothForm(request.POST)
+        bn = request.GET['bname']
         if form.is_valid():
             booth = form.save(commit=False)
             booth.auther = request.user
+            booth.BthName = bn
+            #ph = photo.objects.filter(name__contains=bn)
+            #booth.picture.add(ph)
             booth.save()
     else:
         form = BoothForm()
-    return render(request, 'booth/new.html', {'form':form})
+    return render(request, 'booth/newbooth.html', {'form':form})
 
 def imgnew(request):
     if request.method == "POST":
-        form = ImageAdd(request.POST)
+        form = ImageAdd(request.POST, request.FILES)
         if form.is_valid():
-            booth = form.save(commit=False)
-            booth.auther = request.user
-            booth.save()
-            redirect('booth/')
+            bimg = form.save(commit=False)
+            bimg.name=request.GET['bname']
+            bimg.save()
     else:
         form = ImageAdd()
-    return render(request, 'booth/new.html', {'form':form})
+    return render(request, 'booth/newimg.html', {'form':form})
 
 def joinsection(request):
     if request.method == "POST":

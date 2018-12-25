@@ -1,0 +1,8 @@
+{% extends 'booth/template.html' %}
+{% block contents %}
+    <h1>동아리 부스 정보 입력</h1>
+    <div id="warea">
+        <input id="bname" type="text">
+        <button type="submit" onclick="name=document.getElementById('bname').value;location.href='/imgnew?bname='+name;">다음</button>
+    </div>
+{% endblock %}

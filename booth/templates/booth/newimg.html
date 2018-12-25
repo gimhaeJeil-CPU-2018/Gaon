@@ -1,0 +1,22 @@
+{% extends 'booth/template.html' %}
+{% block contents %}
+    <h1>동아리 부스 정보 입력</h1>
+    <div id="warea">
+        <form id="wform" method="post" enctype="multipart/form-data">{% csrf_token %}
+            <h3 id='bname'></h3>
+            {{ form.as_p }}
+            <button type='submit' id='butten'>다른사진도 추가하기</button>
+            <button type='submit' onclick='location.href="/boothnew?bname="+bname' id='butten'>다음</button>
+        </form>
+    </div>
+    <script>
+            function getParameterByName(name) {
+                name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                    results = regex.exec(location.search);
+                return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+            }
+            var bname=getParameterByName('bname');
+            document.getElementById("bname").innerHTML=bname;
+    </script>
+{% endblock %}
