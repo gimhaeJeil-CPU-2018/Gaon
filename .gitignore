@@ -7,3 +7,11 @@
 스크린샷_2018-07-13_오전_12.29.29.png
 스크린샷_2018-11-18_오후_6.55.26.png
 스크린샷_2018-11-18_오후_8.41.42.png
+deploy.json
+fabfile.py
+*.pyc
+*~
+__pycache__
+db.sqlite3
+/static
+.DS_Store
