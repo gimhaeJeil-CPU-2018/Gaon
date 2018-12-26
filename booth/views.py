@@ -27,6 +27,7 @@ def boothnew(request):
             #ph = photo.objects.filter(name__contains=bn)
             #booth.picture.add(ph)
             booth.save()
+            return redirect('/')
     else:
         form = BoothForm()
     return render(request, 'booth/newbooth.html', {'form':form})
