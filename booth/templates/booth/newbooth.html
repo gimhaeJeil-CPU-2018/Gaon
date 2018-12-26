@@ -3,6 +3,10 @@
     <h1>동아리 부스 정보 입력</h1>
     <div id="warea">
         <form id="wform" method="post">{% csrf_token %}
+            Stxt:목록에 띄울 내용<br>
+            Text:부스 정보창에 띄울 내용<br>
+            Floor:층-2층이면 2, 3층이면 3이라 쓰면 됩니다<br>
+            Location:층을 제외한 교실을 입력 해 주시면 됩니다<br>
             {{ form.as_p }}
             <button type='submit' id='butten'>저장</button>
         </form>
